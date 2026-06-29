@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Size Note — 개인정보처리방침 / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #F2EEE4; --card: #FFFFFF; --ink: #1A1916; --muted: #6B6862;
+    --accent: #00894C; --line: #E6E0D2;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  .logo { display: inline-block; font-size: 22px; font-weight: 800; color: var(--accent); letter-spacing: -0.02em; }
+  .nav { margin-bottom: 28px; }
+  .nav a { color: var(--muted); font-size: 14px; }
+  h1 { font-size: 26px; letter-spacing: -0.02em; margin: 8px 0 4px; }
+  h2 { font-size: 21px; margin: 40px 0 8px; letter-spacing: -0.01em; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  .eff { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 700; }
+  .callout {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 12px; padding: 14px 16px; margin: 16px 0; color: var(--muted);
+  }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 48px 0; }
+  .divider-label { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 48px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><span class="logo">Size&nbsp;Note</span> &nbsp;·&nbsp; <a href="index.html">← 지원 / Support</a></div>
+
+    <!-- ============ 한국어 ============ -->
+    <h1>개인정보처리방침</h1>
+    <div class="eff">시행일: 2026년 6월 29일</div>
+    <p>Size Note(이하 "앱")는 사용자가 자신의 의류·신발 사이즈를 기록하고 쇼핑 시 꺼내 보도록 돕는 개인용 도구입니다. 앱은 사용자의 프라이버시를 중요하게 생각하며, 최소한의 정보만 수집합니다.</p>
+
+    <h2>1. 수집하는 정보</h2>
+    <table>
+      <tr><th>구분</th><th>항목</th><th>수집 방식</th></tr>
+      <tr><td>계정 정보</td><td>Apple/Google 로그인 식별자, 이메일 주소</td><td>로그인 시(소셜 로그인 제공자 경유)</td></tr>
+      <tr><td>사이즈 기록</td><td>브랜드·카테고리·모델명·사이즈 표기(옷 태그의 사이즈 라벨)·발볼·핏 평가·메모</td><td>사용자가 직접 입력</td></tr>
+      <tr><td>제품 사진(선택)</td><td>사용자가 첨부한 제품 사진</td><td>사용자가 직접 첨부 (기기에만 저장, 서버 전송 안 함)</td></tr>
+    </table>
+    <div class="callout">앱은 가슴/허리 둘레를 직접 측정해 수집하지 않습니다. 사이즈 비교 화면에 보이는 cm 값은 입력한 사이즈 라벨로부터 기기 안에서 계산되는 표시용 환산값이며, 서버로 전송·저장되지 않습니다.</div>
+    <ul>
+      <li>앱은 <strong>광고 식별자, 위치정보, 연락처, 사용 분석·추적 데이터를 수집하지 않습니다.</strong></li>
+      <li>앱에는 광고·분석·크래시 수집 SDK가 <strong>일절 포함되어 있지 않습니다.</strong></li>
+    </ul>
+
+    <h2>2. 정보의 이용 목적</h2>
+    <ul>
+      <li>사용자의 사이즈 기록을 저장·조회·검색하는 앱 핵심 기능 제공</li>
+      <li>로그인한 사용자의 여러 기기 간 데이터 동기화</li>
+      <li>로그인·계정 식별</li>
+    </ul>
+
+    <h2>3. 저장 및 전송</h2>
+    <ul>
+      <li>모든 기록은 우선 <strong>사용자 기기 내부(로컬)</strong>에 저장됩니다.</li>
+      <li>로그인한 경우, 사이즈 기록은 <strong>사용자 본인의 인증 계정</strong>에 한해 클라우드(Supabase, Postgres)로 동기화됩니다.</li>
+      <li>전송 구간은 <strong>HTTPS로 암호화</strong>되며, 서버 측 행 수준 보안(RLS)에 따라 <strong>본인 계정의 데이터에만 접근</strong>할 수 있습니다. 다른 사용자는 열람할 수 없습니다.</li>
+      <li><strong>제품 사진은 기기에만 저장</strong>되며 서버로 전송되지 않습니다(기기 변경 시 동행하지 않음).</li>
+      <li>사이즈 라벨의 cm 환산값은 <strong>기기 안에서만 계산</strong>되며 서버에 저장·전송되지 않습니다.</li>
+      <li>신체 치수 등 민감 항목은 <strong>로그·진단 정보로 출력하지 않습니다.</strong></li>
+    </ul>
+
+    <h2>4. 제3자 제공·판매</h2>
+    <ul>
+      <li>앱은 사용자의 정보를 <strong>제3자에게 판매·공유·제공하지 않습니다.</strong></li>
+      <li>단, 서비스 운영에 필요한 처리수탁자(인프라 제공자)를 이용합니다:
+        <ul>
+          <li><strong>Supabase</strong> (데이터베이스·인증 호스팅)</li>
+          <li><strong>Apple / Google</strong> (소셜 로그인 인증)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>5. 보관 기간 및 삭제</h2>
+    <ul>
+      <li>기록은 사용자가 삭제하기 전까지 보관되며, 앱 내에서 삭제 시 <strong>로컬과 서버에서 함께 삭제</strong>됩니다.</li>
+      <li><strong>계정 및 전체 데이터 삭제는 앱 내 [설정] → [회원 탈퇴]에서 직접 하실 수 있습니다.</strong> 탈퇴 시 계정과 모든 사이즈 기록이 서버·기기에서 영구 삭제되며 되돌릴 수 없습니다.</li>
+    </ul>
+
+    <h2>6. 만 14세 미만 아동</h2>
+    <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 의도적으로 해당 정보를 수집하지 않습니다.</p>
+
+    <h2>7. 앱 권한</h2>
+    <ul>
+      <li><strong>사진 라이브러리(선택)</strong>: 제품 사진 첨부 시에만 사용. 거부해도 핵심 기능 사용 가능.</li>
+      <li><strong>네트워크</strong>: 로그인·동기화에 사용.</li>
+      <li>앱은 <strong>App Tracking Transparency 추적을 수행하지 않습니다.</strong></li>
+    </ul>
+
+    <h2>8. 개인정보 보호책임자 / 문의</h2>
+    <ul>
+      <li>책임자: 박진우 (개인 개발자)</li>
+      <li>문의: <a href="mailto:sizenote.app@gmail.com">sizenote.app@gmail.com</a></li>
+    </ul>
+
+    <h2>9. 방침 변경</h2>
+    <p>본 방침이 변경되는 경우 앱 또는 본 페이지를 통해 고지합니다.</p>
+
+    <hr />
+    <div class="divider-label">English</div>
+
+    <!-- ============ English ============ -->
+    <h1>Privacy Policy</h1>
+    <div class="eff">Effective date: June 29, 2026</div>
+    <p>Size Note ("the App") is a personal tool that helps you record your own clothing and shoe sizes and recall them while shopping. We value your privacy and collect the minimum information necessary.</p>
+
+    <h2>1. Information we collect</h2>
+    <table>
+      <tr><th>Type</th><th>Items</th><th>How</th></tr>
+      <tr><td>Account</td><td>Apple/Google sign-in identifier, email address</td><td>At sign-in (via the social login provider)</td></tr>
+      <tr><td>Size records</td><td>Brand, category, model, size label (as printed on the garment tag), foot width, fit rating, notes</td><td>Entered by you</td></tr>
+      <tr><td>Product photo (optional)</td><td>A product photo you attach</td><td>Attached by you (stored on device only, not uploaded)</td></tr>
+    </table>
+    <div class="callout">The App does not measure or collect your chest/waist circumference. Any cm value shown in size-comparison views is converted on-device from the size label you entered and is never transmitted to or stored on the server.</div>
+    <ul>
+      <li>The App does <strong>not</strong> collect advertising identifiers, location, contacts, or usage/tracking analytics.</li>
+      <li>The App contains <strong>no</strong> advertising, analytics, or crash-reporting SDKs.</li>
+    </ul>
+
+    <h2>2. How we use it</h2>
+    <ul>
+      <li>To provide the core feature: saving, browsing, and searching your size records.</li>
+      <li>To sync your data across your own devices when signed in.</li>
+      <li>For login and account identification.</li>
+    </ul>
+
+    <h2>3. Storage &amp; transmission</h2>
+    <ul>
+      <li>All records are first stored <strong>locally on your device</strong>.</li>
+      <li>When signed in, size records are synced to the cloud (Supabase / Postgres) <strong>only under your own authenticated account</strong>.</li>
+      <li>Transmission is <strong>encrypted via HTTPS</strong>, and server-side Row-Level Security (RLS) restricts access to <strong>your own account's data only</strong>. Other users cannot read it.</li>
+      <li><strong>Product photos remain on your device</strong> and are not uploaded to the server.</li>
+      <li>The cm conversion of a size label is <strong>computed on-device only</strong> and is not stored on or sent to the server.</li>
+      <li>Sensitive items such as body measurements are <strong>never written to logs or diagnostics.</strong></li>
+    </ul>
+
+    <h2>4. Sharing &amp; sale</h2>
+    <ul>
+      <li>We do <strong>not</strong> sell, share, or provide your information to third parties.</li>
+      <li>We use the following processors strictly to operate the service:
+        <ul>
+          <li><strong>Supabase</strong> (database &amp; authentication hosting)</li>
+          <li><strong>Apple / Google</strong> (social login authentication)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>5. Retention &amp; deletion</h2>
+    <ul>
+      <li>Records are kept until you delete them; deleting in the App removes them from <strong>both local and server</strong> storage.</li>
+      <li><strong>You can delete your account and all data directly in the App at [Settings] → [Delete Account].</strong> This permanently erases your account and all size records from both the server and the device, and cannot be undone.</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>The App is not directed to children under 14 and does not knowingly collect their information.</p>
+
+    <h2>7. Permissions</h2>
+    <ul>
+      <li><strong>Photo library (optional):</strong> used only when attaching a product photo. Core features work without it.</li>
+      <li><strong>Network:</strong> used for login and sync.</li>
+      <li>The App does <strong>not</strong> use App Tracking Transparency tracking.</li>
+    </ul>
+
+    <h2>8. Contact</h2>
+    <ul>
+      <li>Controller: Park Jinwoo (independent developer)</li>
+      <li>Contact: <a href="mailto:sizenote.app@gmail.com">sizenote.app@gmail.com</a></li>
+    </ul>
+
+    <h2>9. Changes</h2>
+    <p>We will notify changes through the App or this page.</p>
+
+    <footer>© 2026 Size Note · Park Jinwoo</footer>
+  </div>
+</body>
+</html>
